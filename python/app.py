@@ -203,9 +203,20 @@ def streamlit_app():
     st.title("Face Validation System")
     st.write("Upload an ID photo and a selfie to verify if they match")
 
-    # File uploaders
+    # ID Photo uploader
     id_image = st.file_uploader("Upload ID Photo", type=['jpg', 'jpeg', 'png'])
-    selfie_image = st.file_uploader("Upload Selfie", type=['jpg', 'jpeg', 'png'])
+
+    # Selfie section with both upload and capture options
+    st.write("### Selfie Input")
+    selfie_method = st.radio("Choose selfie input method:", ["Upload Image", "Capture from Camera"])
+    
+    selfie_image = None
+    if selfie_method == "Upload Image":
+        selfie_image = st.file_uploader("Upload Selfie", type=['jpg', 'jpeg', 'png'])
+    else:
+        camera_image = st.camera_input("Take a selfie")
+        if camera_image:
+            selfie_image = camera_image
 
     if id_image and selfie_image:
         # Display uploaded images

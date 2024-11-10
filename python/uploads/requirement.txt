@@ -1,0 +1,12 @@
+fastapi
+python-multipart
+uvicorn
+scikit-image
+opencv-python-headless
+mtcnn
+face-alignment
+matplotlib
+face-recognition
+streamlit
+pillow
+numpy
