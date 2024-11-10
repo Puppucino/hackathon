@@ -1,6 +1,3 @@
-fastapi
-python-multipart
-uvicorn
 scikit-image
 opencv-python-headless
 mtcnn
