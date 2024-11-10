@@ -1,9 +1,5 @@
-scikit-image
-opencv-python-headless
-mtcnn
-face-alignment
-matplotlib
-face-recognition
-streamlit
-pillow
-numpy
+opencv-python==4.8.1.78
+numpy==1.26.3
+face-recognition==1.3.0
+streamlit==1.31.0
+Pillow==10.2.0
